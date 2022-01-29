@@ -65,12 +65,14 @@
                             <div class="col-md-6 offset-md-4">
                                 <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.key') }}"></div>
                                 @if(Session::has('g-recaptcha-response'))
-                                <p class="alert {{Session::get('alert-class', 'alert-info')}}">
+                                <p class="alert {{Session::get('alert-class', 'alert-info')}} ">
                                     {{ Session::get('g-recaptcha-response') }}
                                 </p>
+
                                 @endif
                                 
                                 <br/>
+                                
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
