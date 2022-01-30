@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Laravel - Vue')
+@section('title', 'SISTLIGUE')
 
 @section('content_header')
-    <h1>LaravelVue</h1>
+    <h1>Laravel Vue</h1>
 @stop
 
 @section('content')
