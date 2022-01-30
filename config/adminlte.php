@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '| SistLigue',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>SistLigue</b>PRO',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'SistLigue',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -85,8 +85,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -129,7 +129,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -247,77 +247,120 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
+            'text'        => 'Página Principal',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-home',
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'OPCIONES DEL MENÚ'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Torneos',
+            'url'  => 'admin/torneos',
+            'icon' => 'fas fa-trophy',
+            'icon_color' => 'yellow'
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Equipos',
+            'url'  => 'admin/equipos',
+            'icon' => 'fas fa-shield-alt',
+            'icon_color' => 'red'
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text' => 'Noticias',
+            'url'  => 'admin/noticias',
+            'icon' => 'fas fa-calendar-alt',
+            'icon_color' => 'blue'
+        ],
+        [
+            'text'    => 'Ayuda-Soporte',
+            'icon'    => 'fas fa-question-circle',
+            'icon_color' => 'green',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Novedades',
                     'url'  => '#',
+                    'icon'    => 'fas fa-newspaper',
                 ],
                 [
-                    'text'    => 'level_one',
+                    'text' => 'Sugerencias',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-info-circle',
+                ],
+                [
+                    'text'    => 'Documentos',
                     'url'     => '#',
+                    'icon'    => 'fas fa-file-invoice',
+                    'icon_color' => 'green',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
+                            'text' => 'Reglamentos',
                             'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
+                            'icon'    => 'fas fa-file-pdf',
+                            'icon_color' => 'green',
                             'submenu' => [
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Reglamento Fútbol Sala',
                                     'url'  => '#',
+                                    'icon'    => 'fas fa-file-alt',
                                 ],
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Reglamento Fútbol Campo',
                                     'url'  => '#',
+                                    'icon'    => 'fas fa-file-alt',
+                                ],
+                                [
+                                    'text' => 'Reglamento Fútbol 7',
+                                    'url'  => '#',
+                                    'icon'    => 'fas fa-file-alt',
+                                ],
+                                [
+                                    'text' => 'Reglamento Fútbol 8',
+                                    'url'  => '#',
+                                    'icon'    => 'fas fa-file-alt',
                                 ],
                             ],
                         ],
+                        [
+
+                                            
+                            'text' => 'Formatos de Documentos',
+                            'url'  => '#',
+                            'icon'    => 'fas fa-copy',
+                            'icon_color' => 'green',
+                            'submenu' => [
+                                [
+                                    'text' => 'Formato de Esquela',
+                                    'url'  => '#',
+                                    'icon'    => 'fas fa-file-alt',
+                                ],
+                                [
+                                    'text' => 'Formato Hoja de Alineación',
+                                    'url'  => '#',
+                                    'icon'    => 'fas fa-file-alt',
+                                ],
+                            ],
+                        ]
                     ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
                 ],
             ],
         ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        // ['header' => 'labels'],
+        // [
+        //     'text'       => 'important',
+        //     'icon_color' => 'red',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'warning',
+        //     'icon_color' => 'yellow',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'information',
+        //     'icon_color' => 'cyan',
+        //     'url'        => '#',
+        // ],
     ],
 
     /*
